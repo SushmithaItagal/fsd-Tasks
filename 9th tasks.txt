@@ -1,0 +1,48 @@
+9th tasks
+1.<!DOCTYPE html>
+<html>
+<body onload="myFunction()">
+
+<h1>I'm Java Script</h1>
+
+<script>
+function myFunction() {
+  alert("I'm Java Script");
+  console.log("I'm Java Script");
+}
+</script>
+
+</body>
+</html>
+
+
+3.  Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a "strict" operating context. This strict context prevents certain actions from being taken and throws more exceptions.
+
+And:
+
+Strict mode helps out in a couple ways:
+
+It catches some common coding bloopers, throwing exceptions.
+It prevents, or throws errors, when relatively "unsafe" actions are taken (such as gaining access to the global object).
+It disables features that are confusing or poorly thought out.
+
+
+4.The <noscript> tag defines an alternate content for users that have disabled scripts in their browser or have a browser that doesn't support script.
+
+The <noscript> element can be used in both <head> and <body>.
+
+When used inside the <head> element: <noscript> must contain only <link>, <style>, and <meta> elements.
+
+The content inside the <noscript> element will be displayed if scripts are not supported, or are disabled in the user's browser.
+
+8.  A JavaScript function can also be defined using an expression.
+
+A function expression can be stored in a variable:
+
+Example
+var x = function (a, b) {return a * b};
+
+12.  Flexbox can optionally wrap. If we allow a flex container to wrap, they will wrap down onto another row when the flex items fill a row. Where they line up on the next row is independent of what happenned on the first row, allowing for a masonry-like look.
+
+Grid can also optionally wrap (if we allow auto filling) in the sense that items can fill a row and move to the new row (or auto place themselves), but as they do, they will fall along the same grid lines all the other elements do.
+

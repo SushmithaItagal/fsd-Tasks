@@ -1,0 +1,132 @@
+15th april tasks
+1.When super class and sub class contains same method including parameters and if they are static.
+The method in the super class will be hidden by the one that is in the sub class. This mechanism is known as method hiding.
+
+2.Varargs is a short name for variable arguments. In Java, an argument of a method can accept arbitrary number of values. This argument that can accept variable number of values is called varargs.
+
+3.String color = "red"; 
+  
+switch (color) { 
+case "red": 
+   System.out.println("Color is Red"); 
+   break; 
+case "green": 
+  System.out.println("Color is Green"); 
+   break; 
+default: 
+     System.out.println("Color not found"); 
+} 
+The switch statement when used with a String uses the equals() method to compare the given expression to each value in the case statement and is therefore case-sensitive and will throw a NullPointerException if the expression is null. It is a small but useful feature which not only helps us write more readable code but the compiler will likely generate more efficient bytecode as compared to the if-then-else statement.
+
+4.public class Main{
+     public static void main(String []args){
+        lady l;
+        l=new employee();
+        System.out.println("Mode of work: "+l.modeOfWork());
+        l=new homemaker();
+        System.out.println("Mode of work: "+l.modeOfWork());
+        l=new member();
+        System.out.println("Mode of work: "+l.modeOfWork());
+     }
+}
+class lady{
+    String modeOfWork(){ return null;};
+}
+class employee extends lady
+{
+   String modeOfWork(){
+       return ("Employee ");
+   } 
+}
+class homemaker extends lady
+{
+   String modeOfWork(){
+       return ("Home Maker ");
+   } 
+}
+class member extends lady
+{
+   String modeOfWork(){
+       return ("Member ");
+   } 
+}
+
+5.Polymorphism that is resolved during compiler time is known as static polymorphism. Method overloading is an example of compile time polymorphism.
+Method Overloading: This allows us to have more than one method having the same name, if the parameters of methods are different in number, sequence and data types of parameters
+class SimpleCalculator
+{
+    int add(int a, int b)
+    {
+         return a+b;
+    }
+    int  add(int a, int b, int c) 
+    {
+         return a+b+c;
+    }
+}
+public class Demo
+{
+   public static void main(String args[])
+   {
+   SimpleCalculator obj = new SimpleCalculator();
+       System.out.println(obj.add(10, 20));
+       System.out.println(obj.add(10, 20, 30));
+   }
+}
+
+6.
+
+7.In Java SE 7, the integral types (byte, short, int, and long) can also be expressed using the binary number system. To specify a binary literal, add the prefix 0b or 0B to the number. The following examples show binary literals:
+
+// An 8-bit 'byte' value:
+byte aByte = (byte)0b00100001;
+
+// A 16-bit 'short' value:
+short aShort = (short)0b1010000101000101;
+
+// Some 32-bit 'int' values:
+int anInt1 = 0b10100001010001011010000101000101;
+int anInt2 = 0b101;
+int anInt3 = 0B101; // The B can be upper or lower case.
+
+// A 64-bit 'long' value. Note the "L" suffix:
+long aLong = 0b1010000101000101101000010100010110100001010001011010000101000101L;
+Binary literals can make relationships among data more apparent than they would be in hexadecimal or octal. For example, each successive number in the following array is rotated by one bit:
+
+public static final int[] phases = {
+  0b00110001,
+  0b01100010,
+  0b11000100,
+  0b10001001,
+  0b00010011,
+  0b00100110,
+  0b01001100,
+  0b10011000
+}
+In hexadecimal, the relationship among the numbers is not readily apparent:
+
+public static final int[] phases = {
+    0x31, 0x62, 0xC4, 0x89, 0x13, 0x26, 0x4C, 0x98
+}
+
+8.Converting a superclass type to a subclass type is known as downcasting.
+  class Super {
+   void Sample() {
+      System.out.println("method of super class");
+   }
+}
+
+public class Sub extends Super {
+   void Sample() {
+      System.out.println("method of sub class");
+   }
+
+   public static void main(String args[]) {
+      Super obj = new Sub();
+      Sub sub = (Sub) obj; sub.Sample();
+   }
+}
+boxing and unboxing
+Autoboxing: Converting a primitive value into an object of the corresponding wrapper class is called autoboxing. For example, converting int to Integer class
+
+Unboxing: Converting an object of a wrapper type to its corresponding primitive value is called unboxing. For example conversion of Integer to int.  
